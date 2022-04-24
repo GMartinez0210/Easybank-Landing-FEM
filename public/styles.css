@@ -11,24 +11,24 @@
 }
 
 /* General */
-
-/* Navbar */
-.bg-navbar {
+.btn-gradient {
     background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
     color: white;
     border-radius: 2rem;
 }
-.item {
+
+/* Navbar */
+#nav-content .item {
     position: relative;
     overflow: hidden;
 }
-.link {
+#nav-content .link {
     color: hsl(233, 8%, 62%);
 }
 
 
 /* Hover for Nav */
-.item::after {
+#nav-content .item::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -38,22 +38,113 @@
     background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
     transition: 0.5s ease-in-out;
 }
-.item:hover.item:after,
-.link:hover.item:after{
+#nav-content .item:hover.item:after,
+#nav-content .link:hover.item:after{
     left: 0;
 }
-.link:hover {
+#nav-content .link:hover {
     color: hsl(233, 8%, 62%);
 }
 
-/* Header */
-
 /* Main */
 
+
+/* Header */
+.header-container {
+    overflow: hidden;
+    position: relative;
+}
+.header-phones {
+    position: absolute;
+    top: calc(-20%);
+    right: calc(-10%);
+    z-index: 2;
+    width: 60%;
+}
+.header {
+    overflow: hidden;
+}
+.header-content {
+    width: 40%;
+}
+.header-title {
+    font-size: 3rem;
+    font-weight: 400;
+}
+.header-paragraph {
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+.header-decoration {
+    width: 60%;
+}
+.header-background,
+.header-phones {
+    position: absolute;
+}
+.header-background {
+    width: 200%;
+    height: 200%;
+    top: calc(-50%);
+    right: calc(-100%);
+}
+
 /* Section */
+.section-title {
+    font-size: 2rem;
+    font-weight: 400;
+}
+.section-content {
+    width: 50%;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
 
 /* Article */
+.article-icons .figure-img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.article-imgs .figure-img {
+    width: 90%;
+    height: 150px;
+}
 
 /* Figure */
 
+
 /* Footer */
+.footer {
+    background: hsl(233, 26%, 24%);
+    color: hsl(0, 0%, 100%);
+}
+.footer .row {
+    justify-content: space-between;
+}
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+.footer .link {
+    color: hsl(0, 0%, 100%);
+}
+
+/* Media queries to responsive design */
+@media (max-width: 1024px) {
+    /* Navbar */
+    #nav-content,
+    #button-request {
+        display: none !important;
+    }
+    #nav-button {
+        display: block;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-imgs .figure-img {
+        height: 250px;
+    }
+}
