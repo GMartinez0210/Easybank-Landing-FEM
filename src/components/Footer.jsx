@@ -1,14 +1,11 @@
 import React from "react";
 import logoWhite from "../images/logo-white.svg"
-import facebook from "../images/icon-facebook.svg"
-import instagram from "../images/icon-instagram.svg"
-import pinterest from "../images/icon-pinterest.svg"
-import youtube from "../images/icon-youtube.svg"
-import twitter from "../images/icon-twitter.svg"
+import redes from "../redes"
+import Redes from "./Redes"
 
 function Footer() {
     return (
-        <footer className="footer py-5">
+        <footer className="footer">
             <div className="py-5 container">
                 <div className="row">
                     <div className="col col-lg-6 col-sm-12">
@@ -18,15 +15,19 @@ function Footer() {
                                     <img src={logoWhite} />
                                 </div>
                                 <div className="col footer-social">
-                                    <img src={facebook} />
-                                    <img src={youtube} />
-                                    <img src={twitter} />
-                                    <img src={pinterest} />
-                                    <img src={instagram} />
+                                    {redes.map((red, index) => {
+                                        return (
+                                            <Redes 
+                                                key={"social-media-"+index}
+                                                index = {index}
+                                                red = {red}
+                                            />
+                                        )
+                                    })}
                                 </div>
                             </div>
                             <div className="col col-lg-6 col-12">
-                                <nav className="navbar">
+                                <nav className="navbar footer-navbar">
                                     <ul className="navbar-nav">
                                         <li className="nav-item item">
                                             <a className="nav-link link" href="#">About us</a>

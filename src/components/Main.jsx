@@ -5,7 +5,7 @@ import info from "../info"
 
 function Main() {
     return (
-        <main className="main container py-5 my-5">
+        <main className="main container-fluid">
             {info.map((item, index) => {
                 return (
                     <Section key={"section"+index} 
@@ -13,6 +13,7 @@ function Main() {
                         content={item.content}
                         info={item.info}
                         uniqueClass={item.uniqueClass}
+                        backgroundClass={item.backgroundClass}
                     />
                 )
             })}

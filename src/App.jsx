@@ -9,13 +9,12 @@ function App() {
   return (
     <div className="container-fluid px-0">
       <Nav />
-      <div className="header-container pb-5">
+      <div className="header-container">
         <img className="header-phones" src={imageMockups} />
         <Header />
         <Main />
-        <Footer /> 
       </div>
-      
+      <Footer /> 
     </div>
   )
 }
