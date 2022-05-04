@@ -2,8 +2,9 @@ import React from "react";
 import logo from "../images/logo.svg"
 import iconHamburger from "../images/icon-hamburger.svg"
 import iconClose from "../images/icon-close.svg"
-
-import Portal from "../Portal";
+import NavbarNav from "./NavbarNav";
+import Portal from "../Portal"
+import ButtonGradient from "./ButtonGradient";
 
 function Nav() {
 
@@ -18,26 +19,15 @@ function Nav() {
         <nav className="navbar navbar-expand-lg container">
             <a href="#" className="navbar-brand"><img src={logo} /></a>
             <div id="nav-content" className="navbar-collapse">
-                <ul className="navbar-nav mx-auto">
-                    <li className="nav-item mx-3 item">
-                        <a className="nav-link link">Home</a>
-                    </li>
-                    <li className="nav-item mx-3 item">
-                        <a className="nav-link link">About</a>
-                    </li>
-                    <li className="nav-item mx-3 item">
-                        <a className="nav-link link">Contact</a>
-                    </li>
-                    <li className="nav-item mx-3 item">
-                        <a className="nav-link link">Blog</a>
-                    </li>
-                    <li className="nav-item mx-3 item">
-                        <a className="nav-link link">Careers</a>
-                    </li>
-                </ul>
-                <button type="button" id="button-request" className="btn btn-gradient btn-lg px-3">
-                    <span className="px-3">Request Invite</span>
-                </button>
+                <NavbarNav 
+                    extraClassUl = {"mx-auto"}
+                    extraClassLi = {"mx-3"}
+                    items = {["Home", "About us", "Contact", "Blog", "Careers"]}
+                />
+                <ButtonGradient 
+                    type={"button" }
+                    id={"button-request"}
+                />
             </div>
             <button 
                 type="button" 
