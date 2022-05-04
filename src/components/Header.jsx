@@ -1,6 +1,7 @@
 import React from "react";
 import bgIntroDesktop from "../images/bg-intro-desktop.svg"
 import bgIntroMobile from "../images/bg-intro-mobile.svg"
+import ButtonGradient from "./ButtonGradient";
 
 function Header() {
 
@@ -19,9 +20,7 @@ function Header() {
                     <p className="header-paragraph">
                         Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
                     </p>
-                    <button className="btn btn-lg px-3 btn-gradient">
-                        <span className="px-3">Request Invite</span>
-                    </button>
+                    <ButtonGradient />
                 </div>
                 <div className="header-decoration position-relative">
                     {

@@ -1,6 +1,8 @@
 import React from "react";
 import logoWhite from "../images/logo-white.svg"
 import redes from "../redes"
+import ButtonGradient from "./ButtonGradient";
+import NavbarNav from "./NavbarNav";
 import Redes from "./Redes"
 
 function Footer() {
@@ -28,36 +30,20 @@ function Footer() {
                             </div>
                             <div className="col col-lg-6 col-12">
                                 <nav className="navbar footer-navbar">
-                                    <ul className="navbar-nav">
-                                        <li className="nav-item item">
-                                            <a className="nav-link link" href="#">About us</a>
-                                        </li>
-                                        <li className="nav-item item">
-                                            <a className="nav-link link" href="#">Contact</a>
-                                        </li>
-                                        <li className="nav-item item">
-                                            <a className="nav-link link" href="#">Blog</a>
-                                        </li>
-                                    </ul>
-                                    <ul className="navbar-nav">
-                                        <li className="nav-item item">
-                                            <a className="nav-link link" href="#">Careers</a>
-                                        </li>
-                                        <li className="nav-item item">
-                                            <a className="nav-link link" href="#">Support</a>
-                                        </li>
-                                        <li className="nav-item item">
-                                            <a className="nav-link link" href="#">Privacy Policy</a>
-                                        </li>
-                                    </ul>
+                                    <NavbarNav 
+                                        items = {["About us", "Contact", "Blog"]}
+                                    />
+                                    <NavbarNav 
+                                        items = {["Careers", "Supports", "Privacy Policy"]}
+                                    />
                                 </nav>
                             </div>
                         </div>
                     </div>
                     <div className="col col col-lg-3 col-12">
-                        <button className="btn btn-lg btn-gradient px-3 mb-5">
-                            <span className="px-3">Request Invite</span>
-                        </button>
+                        <ButtonGradient 
+                            extraClassBtn={"mb-5"}
+                        />
                         <p>&copy; Easybank. All Rights Reserved</p>
                     </div>
                 </div>
