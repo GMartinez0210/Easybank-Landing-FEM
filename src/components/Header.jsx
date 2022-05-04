@@ -20,7 +20,7 @@ function Header() {
                         Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
                     </p>
                     <button className="btn btn-lg px-3 btn-gradient">
-                        <span>Request Invite</span>
+                        <span className="px-3">Request Invite</span>
                     </button>
                 </div>
                 <div className="header-decoration position-relative">

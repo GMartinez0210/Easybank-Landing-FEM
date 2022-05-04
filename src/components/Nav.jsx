@@ -3,12 +3,15 @@ import logo from "../images/logo.svg"
 import iconHamburger from "../images/icon-hamburger.svg"
 import iconClose from "../images/icon-close.svg"
 
+import Portal from "../Portal";
+
 function Nav() {
 
-    const [close, setClose] = React.useState(true)
+    const [isClose, setClose] = React.useState(true)
 
     function handleClick() {
-        setClose(!close)
+        setClose(!isClose)
+        Portal(isClose)
     }
 
     return (
@@ -42,7 +45,7 @@ function Nav() {
                 className="btn btn-lg collapse"
                 onClick={handleClick}>
                 {
-                    close ? 
+                    isClose ? 
                     <img src={iconHamburger} /> :
                     <img src={iconClose} />
                 }
